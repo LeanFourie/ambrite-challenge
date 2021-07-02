@@ -1,0 +1,108 @@
+/****** Colors ******/
+// Primary
+$primaryColorLighter:   #4b50bd;
+$primaryColorLight:     #191f80;
+$primaryColor:          #040744;
+$primaryColorDark:      #030533;
+$primaryColorDarker:    #020325;
+$primary-100:           $primaryColorLighter;
+$primary-300:           $primaryColorLight;
+$primary-500:           $primaryColor;
+$primary-700:           $primaryColorDark;
+$primary-900:           $primaryColorDarker;
+
+// Secondary
+$secondaryColorLighter: #f39ca2;
+$secondaryColorLight:   #ec5a64;
+$secondaryColor:        #DC0F1D;
+$secondaryColorDark:    #AB0F19;
+$secondaryColorDarker:  #75040c;
+$secondary-100:         $secondaryColorLighter;
+$secondary-300:         $secondaryColorLight;
+$secondary-500:         $secondaryColor;
+$secondary-700:         $secondaryColorDark;
+$secondary-900:         $secondaryColorDarker;
+
+// Secondary
+$tertiaryColorLighter:  #fffce7;
+$tertiaryColorLight:    #e7e0ac;
+$tertiaryColor:         #cbc27c;
+$tertiaryColorDark:     #a79e5b;
+$tertiaryColorDarker:   #a09756;
+$tertiary-100:          $tertiaryColorLighter;
+$tertiary-300:          $tertiaryColorLight;
+$tertiary-500:          $tertiaryColor;
+$tertiary-700:          $tertiaryColorDark;
+$tertiary-900:          $tertiaryColorDarker;
+
+// Info
+$infoColorLighter:      #d0e6ff;
+$infoColorLight:        #97c7ff;
+$infoColor:             #0076ff;
+$infoColorDark:         #0054b4;
+$infoColorDarker:       #002249;
+$info-100:              $infoColorLighter;
+$info-300:              $infoColorLight;
+$info-500:              $infoColor;
+$info-700:              $infoColorDark;
+$info-900:              $infoColorDarker;
+
+// Success
+$successColorLighter:   #c3ffd7;
+$successColorLight:     #5ee28a;
+$successColor:          #1ab14c;
+$successColorDark:      #0f7732;
+$successColorDarker:    #0c5524;
+$success-100:           $successColorLighter;
+$success-300:           $successColorLight;
+$success-500:           $successColor;
+$success-700:           $successColorDark;
+$success-900:           $successColorDarker;
+
+// Warning
+$warningColorLighter:   #fffce7;
+$warningColorLight:     #e7e0ac;
+$warningColor:          #cbc27c;
+$warningColorDark:      #a79e5b;
+$warningColorDarker:    #a09756;
+$warning-100:           $warningColorLighter;
+$warning-300:           $warningColorLight;
+$warning-500:           $warningColor;
+$warning-700:           $warningColorDark;
+$warning-900:           $warningColorDarker;
+
+// Danger
+$dangerColorLighter:    #f39ca2;
+$dangerColorLight:      #ec5a64;
+$dangerColor:           #DC0F1D;
+$dangerColorDark:       #AB0F19;
+$dangerColorDarker:     #75040c;
+$danger-100:            $warningColorLighter;
+$danger-300:            $warningColorLight;
+$danger-500:            $warningColor;
+$danger-700:            $warningColorDark;
+$danger-900:            $warningColorDarker;
+
+// Grey
+$greyColorLighter:      #F5F5F8;
+$greyColorLight:        #d4d4dd;
+$greyColor:             #ADADB4;
+$greyColorDark:         #7d7d83;
+$greyColorDarker:       #454549;
+$grey-100:              $warningColorLighter;
+$grey-300:              $warningColorLight;
+$grey-500:              $warningColor;
+$grey-700:              $warningColorDark;
+$grey-900:              $warningColorDarker;
+
+// Neutral
+$white:                 #fff;
+$black:                 #000;
+
+
+/****** FONTS ******/
+$font-family-primary:   'Inter', -apple-system,
+                        BlinkMacSystemFont, 'Segoe UI',
+                        Roboto, Oxygen, Ubuntu,
+                        Cantarell, 'Open Sans',
+                        'Helvetica Neue', sans-serif;

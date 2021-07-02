@@ -1,0 +1,62 @@
+@mixin transition($property) {
+    transition: $property;
+    -webkit-transition: $property;
+    -o-transition: $property;
+}
+
+@mixin transform($property) {
+    transform: $property;
+    -webkit-transform: $property;
+    -o-transform: $property;
+}
+
+@mixin animation($property, $delay, $time, $count) {
+    animation-delay: $delay;
+    animation-duration: $time;
+    animation-name: $property;
+    animation-fill-mode: both;
+    animation-iteration-count: $count;
+    animation-timing-function: linear;
+}
+
+/*** Responsive Queries ***/
+@mixin media-lt-1600 {
+    @media screen and (max-width: 1600px) {
+        @content;
+    }
+}
+@mixin media-lt-1500 {
+    @media screen and (max-width: 1500px) {
+        @content;
+    }
+}
+
+@mixin media-lt-1200 {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-lt-900 {
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin media-lt-750 {
+    @media screen and (max-width: 750px) {
+        @content;
+    }
+}
+
+@mixin media-lt-600 {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin media-lt-400 {
+    @media screen and (max-width: 400px) {
+        @content;
+    }
+}
