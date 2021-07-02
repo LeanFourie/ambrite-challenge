@@ -36,7 +36,7 @@ function Home( props ) {
     return (
         <DefaultTheme
             page={{
-                title: 'Home Page',
+                title: 'Home',
                 identifier: 'Home Page'
             }}
         >

@@ -1,9 +1,6 @@
 // Project Imports
 import React, { useState } from 'react'
 
-// Helpers
-import { fetchDataFromAPI } from './../helpers/dataManagement'
-
 // Layout
 import DefaultTheme from './../layouts/default'
 
@@ -56,11 +53,12 @@ function Distances( props ) {
         setDataList(data)
     }
 
+    // Page
     return (
         <DefaultTheme
             page={{
-                title: 'Home Page',
-                identifier: 'Home Page'
+                title: 'Distances',
+                identifier: 'Distances Page'
             }}
         >
             {/* Get entries */}
@@ -80,18 +78,5 @@ function Distances( props ) {
         </DefaultTheme>
     )
 }
-
-// Fetch data
-// export async function getStaticProps() {
-//     // Fetch from API
-//     let countryData = await fetchDataFromAPI('data.json')
-
-//     // Return the fetched data
-//     return {
-//         props: {
-//             countryData: countryData
-//         }
-//     }
-// }
 
 export default Distances

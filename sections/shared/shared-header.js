@@ -18,7 +18,7 @@ export default function SharedHeader() {
                         Distance checks
                     </a>
                 </Link>
-                <Link href="/">
+                <Link href="/array-union">
                     <a className="links__item">
                         Array union
                     </a>
