@@ -10,10 +10,10 @@ function HomeValidations( props ) {
                 <div className="validation__item validation__item--geo">
                     <div className="item__text">
                         <h2 className="text__element text__element--title">
-                            Geo data validation
+                            Geo validation
                         </h2>
                         <p className="text__element text__element--paragraph">
-                            Check if the geo data set is valid.
+                            Check if the geo dataset is valid.
                         </p>
                     </div>
                     <div className="item__actions">
@@ -37,14 +37,14 @@ function HomeValidations( props ) {
                 </div>
                 {/* ./Geo */}
 
-                {/* Countries */}
+                {/* Data */}
                 <div className="validation__item validation__item--geo">
                     <div className="item__text">
                         <h2 className="text__element text__element--title">
-                            Countries data validation
+                            Data validation
                         </h2>
                         <p className="text__element text__element--paragraph">
-                            Check if the countries data set is valid.
+                            Check if the states dataset is valid.
                         </p>
                     </div>
                     <div className="item__actions">
@@ -55,18 +55,18 @@ function HomeValidations( props ) {
                             Test
                         </button>
                     </div>
-                    { ( props.countries && props.countries.countriesIsChecked ) &&
+                    { ( props.data && props.data.dataIsChecked ) &&
                         <div className={`
                             item__validity
-                            item__validity--${ props.countries.countriesIsValid }
+                            item__validity--${ props.data.dataIsValid }
                         `}>
                             <p className="validity__element">
-                                { props.countries.countriesIsValid ? 'Dataset is valid' : 'Dataset is invalid' }
+                                { props.data.dataIsValid ? 'Dataset is valid' : 'Dataset is invalid' }
                             </p>
                         </div>
                     }
                 </div>
-                {/* ./Countries */}
+                {/* ./Data */}
             </div>
         </section>
     )

@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 
 // Helpers
-import { fetchDataFromAPI } from './../helpers/dataManagement'
 import { jsonValidityCheck } from './../helpers/helpers'
 
 // Layout
@@ -16,11 +15,11 @@ function Home( props ) {
     // States
     const [geoIsChecked, setGeo] = useState( false )
     const [geoIsValid, setGeoValidation] = useState( false )
-    const [countriesIsChecked, setCountries] = useState( false )
-    const [countriesIsValid, setCountryValidation] = useState( false )
+    const [dataIsChecked, setData] = useState( false )
+    const [dataIsValid, setDataValidation] = useState( false )
 
     // Functions
-    const checkIfEndpointsAreValid = async ( endpoint ) => {
+    const checkIfEndpointsAreValid = async ( endpoint, set, check ) => {
         // Get data from static file ( Cross-origin blocked the API call from local )
         let data = ( endpoint !== null ) ? await require(`../data/${ endpoint }`) : null,
             isValidData = jsonValidityCheck(data)
@@ -29,8 +28,8 @@ function Home( props ) {
             setGeo(!geoIsChecked)
             setGeoValidation(isValidData)
         } else {
-            setCountries(!countriesIsChecked)
-            setCountryValidation(isValidData)
+            setData(!dataIsChecked)
+            setDataValidation(isValidData)
         }
     }
 
@@ -45,37 +44,19 @@ function Home( props ) {
             <HomeValidations
                 geo={{
                     geoIsChecked: geoIsChecked,
-                    geoIsValid: geoIsValid
+                    geoIsValid: geoIsValid,
+                    setGeo: setGeo,
+                    setGeoValidation: setGeoValidation
                 }}
-                countries={{
-                    countriesIsChecked: countriesIsChecked,
-                    countriesIsValid: countriesIsValid
+                data={{
+                    dataIsChecked: dataIsChecked,
+                    dataIsValid: dataIsValid
                 }}
                 checkIfEndpointsAreValid={ ( endpoint ) => checkIfEndpointsAreValid( endpoint ) }
             />
             {/* ./Validation Checks */}
         </DefaultTheme>
     )
-}
-
-// Fetch data
-export async function getStaticProps() {
-    // Fetch from API
-    let geoData = await fetchDataFromAPI('geo.json')
-    let countryData = await fetchDataFromAPI('data.json')
-
-    let isValidData = ( jsonValidityCheck(geoData) && jsonValidityCheck(countryData) )
-                        ? true
-                        : false
-
-    // Return the fetched data
-    return {
-        props: {
-            geoData: geoData,
-            countryData: countryData,
-            hasValidData: isValidData
-        }
-    }
 }
 
 export default Home

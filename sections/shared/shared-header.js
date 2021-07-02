@@ -13,7 +13,7 @@ export default function SharedHeader() {
                         Validity checks
                     </a>
                 </Link>
-                <Link href="/">
+                <Link href="/distances">
                     <a className="links__item">
                         Distance checks
                     </a>
