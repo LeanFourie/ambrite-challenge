@@ -57,3 +57,28 @@ export const checkWindowSize = () => {
 
     return mobileViewport
 }
+
+
+// JSON Validity Check
+export const jsonValidityCheck = ( jsonItem ) => {
+    // Check if item is a string else stringify item
+    jsonItem = typeof jsonItem !== 'string'
+                    ? JSON.stringify(jsonItem)
+                    : jsonItem
+
+    // Try to parse JSON string
+    try {
+        jsonItem = JSON.parse(jsonItem)
+    } catch (e) {
+        console.log(e)
+        return false
+    }
+
+    // Check if JSON item exists and if the item is an object
+    if ( jsonItem !== null && typeof jsonItem === 'object' ) {
+        return true
+    }
+
+    // Return false by default
+    return false
+}

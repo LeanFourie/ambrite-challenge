@@ -5,10 +5,10 @@ import React from 'react'
 import Head from 'next/head'
 
 // Helpers
-import {
-	lowercaseText,
-	updateComponentValue
-} from '../helpers/helpers'
+import { lowercaseText } from '../helpers/helpers'
+
+// Sections
+import SharedHeader from './../sections/shared/shared-header'
 
 export default function DefaultTheme( props ) {
     return (
@@ -19,6 +19,10 @@ export default function DefaultTheme( props ) {
 					{/* <link rel="icon" href="/favicon.png" /> */}
 				</Head>
 				{/* ./SEO */}
+
+                {/* Header */}
+                <SharedHeader />
+                {/* Header */}
 	
 				{/* Pages */}
 				<div className={`
