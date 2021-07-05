@@ -8,6 +8,10 @@
                     grid-gap: 20px;
                     align-items: stretch;
 
+                    @include media-lt-400 {
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    }
+
                     &__item {
                         .item__inner {
                             > * {

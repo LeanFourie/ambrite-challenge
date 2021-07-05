@@ -8,6 +8,10 @@
                     background: rgba($whiteColor, .1);
                     border-radius: 16px 16px 0 0;
 
+                    @include media-lt-900 {
+                        display: none;
+                    }
+
                     &__item {
                         padding: 6px 10px;
 
@@ -27,16 +31,41 @@
                         border-top-color: transparent;
                         backdrop-filter: blur(0px);
 
+                        @include media-lt-900 {
+                            grid-template-columns: 1fr;
+                        }
+
                         .item__col {
                             padding: 6px 10px;
 
                             .col__element {
                                 color: rgba($whiteColor, .7);
+
+                                @include media-lt-900 {
+                                    display: grid;
+                                    grid-template-columns: 30% 70%;
+                                }
+
+                                &::before {
+                                    @include media-lt-900 {
+                                        content: attr(data-title)':';
+                                        font-weight: 300;
+                                        font-variation-settings: 'wght' 300;
+                                        opacity: .7;
+                                    }
+                                }
                             }
                         }
 
                         &:last-child {
                             border-radius: 0 0 16px 16px;
+                        }
+                        
+                        &:first-child {
+                            @include media-lt-900 {
+                                border-radius: 16px 16px 0 0;
+                                border-top-color: rgba($whiteColor, .1);
+                            }
                         }
 
                         &:hover {
