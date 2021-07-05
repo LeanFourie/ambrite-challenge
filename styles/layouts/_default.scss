@@ -1,0 +1,46 @@
+.layout {
+    &--default {
+        min-height: 100vh;
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: 200px 1fr;
+        position: relative;
+        z-index: 2;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $primaryColorDarker;
+            z-index: -2;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(135deg, $primaryColorDarker, rgba($primaryColorDarker, .5));
+            z-index: -1;
+        }
+
+        .layout__background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: .06;
+            z-index: -1;
+        }
+
+        .page {
+            padding: 70px;
+        }
+    }
+}

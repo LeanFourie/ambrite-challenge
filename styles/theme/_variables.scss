@@ -1,26 +1,34 @@
 /****** Colors ******/
 // Primary
-$primaryColorLighter:   #4b50bd;
-$primaryColorLight:     #191f80;
-$primaryColor:          #040744;
-$primaryColorDark:      #030533;
-$primaryColorDarker:    #020325;
+$primaryColorLighter:   #d3e2f9;
+$primaryColorLight:     #7ba8ef;
+$primaryColor:          #236de3;
+$primaryColorDark:      #154289;
+$primaryColorDarker:    #07162d;
 $primary-100:           $primaryColorLighter;
+$primary-200:           #a7c4f3;
 $primary-300:           $primaryColorLight;
+$primary-400:           #4f8ae9;
 $primary-500:           $primaryColor;
+$primary-600:           #1c57b6;
 $primary-700:           $primaryColorDark;
+$primary-800:           #0e2b5a;
 $primary-900:           $primaryColorDarker;
 
 // Secondary
-$secondaryColorLighter: #f39ca2;
-$secondaryColorLight:   #ec5a64;
-$secondaryColor:        #DC0F1D;
-$secondaryColorDark:    #AB0F19;
-$secondaryColorDarker:  #75040c;
+$secondaryColorLighter: #D3F9F0;
+$secondaryColorLight:   #7BEFD4;
+$secondaryColor:        #23E3B7;
+$secondaryColorDark:    #15896E;
+$secondaryColorDarker:  #072D24;
 $secondary-100:         $secondaryColorLighter;
+$secondary-200:         #A7F3E2;
 $secondary-300:         $secondaryColorLight;
+$secondary-400:         #4FE9C6;
 $secondary-500:         $secondaryColor;
+$secondary-600:         #1CB693;
 $secondary-700:         $secondaryColorDark;
+$secondary-800:         #0E5A49;
 $secondary-900:         $secondaryColorDarker;
 
 // Secondary
@@ -36,15 +44,19 @@ $tertiary-700:          $tertiaryColorDark;
 $tertiary-900:          $tertiaryColorDarker;
 
 // Info
-$infoColorLighter:      #d0e6ff;
-$infoColorLight:        #97c7ff;
-$infoColor:             #0076ff;
-$infoColorDark:         #0054b4;
-$infoColorDarker:       #002249;
+$infoColorLighter:      #d3e2f9;
+$infoColorLight:        #7ba8ef;
+$infoColor:             #236de3;
+$infoColorDark:         #154289;
+$infoColorDarker:       #07162d;
 $info-100:              $infoColorLighter;
+$info-200:              #a7c4f3;
 $info-300:              $infoColorLight;
+$info-400:              #4f8ae9;
 $info-500:              $infoColor;
+$info-600:              #1c57b6;
 $info-700:              $infoColorDark;
+$info-800:              #0e2b5a;
 $info-900:              $infoColorDarker;
 
 // Success
@@ -54,6 +66,7 @@ $successColor:          #1ab14c;
 $successColorDark:      #0f7732;
 $successColorDarker:    #0c5524;
 $success-100:           $successColorLighter;
+$success-200:           #a9f8c4;
 $success-300:           $successColorLight;
 $success-500:           $successColor;
 $success-700:           $successColorDark;
@@ -78,6 +91,7 @@ $dangerColor:           #DC0F1D;
 $dangerColorDark:       #AB0F19;
 $dangerColorDarker:     #75040c;
 $danger-100:            $warningColorLighter;
+$danger-200:            #f38d94;;
 $danger-300:            $warningColorLight;
 $danger-500:            $warningColor;
 $danger-700:            $warningColorDark;
@@ -96,8 +110,8 @@ $grey-700:              $warningColorDark;
 $grey-900:              $warningColorDarker;
 
 // Neutral
-$white:                 #fff;
-$black:                 #000;
+$whiteColor:            #fff;
+$blackColor:            #000;
 
 
 /****** FONTS ******/

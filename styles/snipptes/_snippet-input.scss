@@ -1,0 +1,67 @@
+.input {
+    @include transition(all .24s ease);
+    position: relative;
+
+    // Children
+    &__label {
+        display: inline-block;
+        margin: 0 0 4px;
+    }
+
+    &__element {
+        width: 100%;
+        padding: 10px 20px;
+        background: $whiteColor;
+        border: 1px solid $greyColorLight;
+        border-radius: 12px;
+        line-height: 1.6;
+        color: $blackColor;
+        font-size: 14px;
+        font-weight: 500;
+        font-variation-settings: 'wght' 500;
+        box-shadow: none;
+        outline: none;
+        
+        &::placeholder {
+            opacity: .4;
+            font-variation-settings: 'wght' 400;
+            font-weight: 400;
+            letter-spacing: .6px;
+        }
+    
+        @include media-lt-750 {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+    }
+
+    &__error {
+        @include transition(all .24s ease);
+        display: inline-block;
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        color: $dangerColor;
+        font-size: 12px;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+    
+    // Types
+    &--type-password {
+        .input__element {
+            letter-spacing: 3px;
+        }
+    }
+
+    // States
+    &--danger {
+        margin: 0 0 30px;
+
+        .input__error {
+            top: calc(100% + 20px);
+            opacity: 1;
+        }
+    }
+}

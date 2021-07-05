@@ -8,7 +8,10 @@ import Head from 'next/head'
 import { lowercaseText } from '../helpers/helpers'
 
 // Sections
-import SharedHeader from './../sections/shared/shared-header'
+import SharedSidebar from './../sections/shared/shared-sidebar'
+
+// Snippets
+import SnippetSvgIcon from './../snippets/snippet-svg-icon'
 
 export default function DefaultTheme( props ) {
     return (
@@ -20,9 +23,18 @@ export default function DefaultTheme( props ) {
 				</Head>
 				{/* ./SEO */}
 
-                {/* Header */}
-                <SharedHeader />
-                {/* Header */}
+                {/* Background */}
+                <div className="layout__background">
+                    <img
+                        src="/image-background.svg"
+                        className="background__element image--cover"
+                    />
+                </div>
+                {/* Background */}
+
+                {/* Sidebar */}
+                <SharedSidebar />
+                {/* Sidebar */}
 	
 				{/* Pages */}
 				<div className={`

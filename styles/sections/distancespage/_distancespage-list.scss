@@ -1,0 +1,52 @@
+.page {
+    &--distances-page {
+        .section {
+            &--list-entries {
+                .header {
+                    display: grid;
+                    grid-template-columns: 10% 10% 10% 50% 10% 10%;
+                    background: rgba($whiteColor, .1);
+                    border-radius: 16px 16px 0 0;
+
+                    &__item {
+                        padding: 6px 10px;
+
+                        .item__element {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .list {
+                    &__item {
+                        @include transition(all .24s ease);
+                        display: grid;
+                        grid-template-columns: 10% 10% 10% 50% 10% 10%;
+                        margin: -1px 0 0;
+                        border: 2px solid rgba($whiteColor, .1);
+                        border-top-color: transparent;
+                        backdrop-filter: blur(0px);
+
+                        .item__col {
+                            padding: 6px 10px;
+
+                            .col__element {
+                                color: rgba($whiteColor, .7);
+                            }
+                        }
+
+                        &:last-child {
+                            border-radius: 0 0 16px 16px;
+                        }
+
+                        &:hover {
+                            background: rgba($whiteColor, .1);
+                            border-top-color: rgba($whiteColor, .1);
+                            backdrop-filter: blur(3px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,340 @@
+.button {
+    display: inline-block;
+
+    // Children
+    &__inner {
+        @include transition(all .24s ease);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        background: rgba($primaryColor, .14);
+        border: none;
+        border-radius: 12px;
+        color: $primaryColor;
+        font-size: 14px;
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+
+        *[stroke] {
+            stroke: $primaryColor;
+        }
+    }
+
+    // Layouts
+    &--icon-left {
+        .button__inner {
+            flex-direction: row-reverse;
+        }
+
+        .button__label {
+            margin-right: 0px;
+            margin-left: 8px;
+        }
+    }
+
+    &--icon {
+        .button__label {
+            margin-right: 8px;
+        }
+    }
+
+    // Colors
+    &--primary {
+        .button__inner {
+            background: rgba($primaryColor, .14);
+            color: $primaryColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $primaryColor;
+                }
+            }
+        }
+
+        &.button--dark {
+            .button__inner {
+                background: $primaryColor;
+                color: $whiteColor;
+    
+                .button__icon {
+                    *[stroke] {
+                        stroke: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+
+    &--secondary {
+        .button__inner {
+            background: rgba($secondaryColor, .14);
+            color: $secondaryColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $secondaryColor;
+                }
+            }
+        }
+
+        &.button--dark {
+            .button__inner {
+                background: $secondaryColor;
+                color: $whiteColor;
+    
+                .button__icon {
+                    *[stroke] {
+                        stroke: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+
+    &--success {
+        .button__inner {
+            background: rgba($successColor, .14);
+            color: $successColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $successColor;
+                }
+            }
+        }
+
+        &.button--dark {
+            .button__inner {
+                background: $successColor;
+                color: $whiteColor;
+    
+                .button__icon {
+                    *[stroke] {
+                        stroke: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+
+    &--warning {
+        .button__inner {
+            background: rgba($warningColor, .14);
+            color: $warningColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $warningColor;
+                }
+            }
+        }
+
+        &.button--dark {
+            .button__inner {
+                background: $warningColor;
+                color: $whiteColor;
+    
+                .button__icon {
+                    *[stroke] {
+                        stroke: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+
+    &--danger {
+        .button__inner {
+            background: rgba($dangerColor, .14);
+            color: $dangerColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $dangerColor;
+                }
+            }
+        }
+
+        &.button--dark {
+            .button__inner {
+                background: $dangerColor;
+                color: $whiteColor;
+    
+                .button__icon {
+                    *[stroke] {
+                        stroke: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+
+    &--white {
+        .button__inner {
+            background: rgba($whiteColor, .14);
+            color: $whiteColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $whiteColor;
+                }
+            }
+        }
+
+        &.button--dark {
+            .button__inner {
+                background: $whiteColor;
+                color: $primaryColorDarker;
+    
+                .button__icon {
+                    *[stroke] {
+                        stroke: $primaryColorDarker;
+                    }
+                }
+            }
+        }
+    }
+
+    &--black {
+        .button__inner {
+            background: rgba($blackColor, .14);
+            color: $blackColor;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $blackColor;
+                }
+            }
+        }
+    }
+
+    &--disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+
+        .button__inner {
+            background: rgba($greyColor, .2);
+            color: rgba($greyColor, .6);
+        }
+    }
+
+    &:hover {
+        // Children
+        .button__inner {
+            background: $primaryColor;
+            color: $whiteColor;
+            cursor: pointer;
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $whiteColor;
+                }
+            }
+        }
+
+        // Colors
+        &.button--primary {
+            .button__inner {
+                background: $primaryColor;
+                color: $whiteColor;
+            }
+
+            &.button--dark {
+                .button__inner {
+                    background: $primaryColorDarker;
+                }
+            }
+        }
+    
+        &.button--secondary {
+            .button__inner {
+                background: $secondaryColor;
+                color: $whiteColor;
+            }
+
+            &.button--dark {
+                .button__inner {
+                    background: $secondaryColorDarker;
+                }
+            }
+        }
+    
+        &.button--success {
+            .button__inner {
+                background: $successColor;
+                color: $whiteColor;
+            }
+
+            &.button--dark {
+                .button__inner {
+                    background: $successColorDarker;
+                }
+            }
+        }
+    
+        &.button--warning {
+            .button__inner {
+                background: $warningColor;
+                color: $whiteColor;
+            }
+
+            &.button--dark {
+                .button__inner {
+                    background: $warningColorDarker;
+                }
+            }
+        }
+    
+        &.button--danger {
+            .button__inner {
+                background: $dangerColor;
+                color: $whiteColor;
+            }
+
+            &.button--dark {
+                .button__inner {
+                    background: $dangerColorDarker;
+                }
+            }
+        }
+    
+        &.button--white {
+            .button__inner {
+                background: $whiteColor;
+                color: $primaryColorDarker;
+            }
+
+            .button__icon {
+                *[stroke] {
+                    stroke: $primaryColorDarker;
+                }
+            }
+
+            &.button--dark {
+                .button__inner {
+                    background: $primaryColorDarker;
+                    color: $whiteColor;
+        
+                    .button__icon {
+                        *[stroke] {
+                            stroke: $whiteColor;
+                        }
+                    }
+                }
+            }
+        }
+    
+        &.button--black {
+            .button__inner {
+                background: $blackColor;
+                color: $whiteColor;
+            }
+        }
+    }
+}

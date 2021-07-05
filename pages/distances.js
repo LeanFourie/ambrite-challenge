@@ -5,12 +5,15 @@ import React, { useState } from 'react'
 import DefaultTheme from './../layouts/default'
 
 // Sections
+import DistancesGet from './../sections/distancespage/distances-get'
 import DistancesList from './../sections/distancespage/distances-list'
 
 // Page
 function Distances( props ) {
     // States
     const [dataList, setDataList] = useState( [] )
+    const [lat, setLat] = useState( '' )
+    const [long, setLong] = useState( '' )
 
     // Functions
     const getClosestStatesFromLocation = async ( lat, long ) => {
@@ -62,9 +65,19 @@ function Distances( props ) {
             }}
         >
             {/* Get entries */}
-            <section className="section section--get-entries">
-
-            </section>
+            <DistancesGet
+                lat={ lat }
+                setLat={ (value) => setLat(value) }
+                long={ long }
+                setLong={ (value) => setLong(value) }
+                getClosestStatesFromLocation={ () => getClosestStatesFromLocation(lat, long) }
+                resetValues={ () => {
+                    setLat('')
+                    setLong('')
+                    setDataList([])
+                }}
+                hasData={ dataList.length > 0 ? true : false }
+            />
             {/* ./Get entries */}
 
             {/* List of entries */}
@@ -74,7 +87,6 @@ function Distances( props ) {
                 />
             }
             {/* ./List of entries */}
-            <button onClick={() => { getClosestStatesFromLocation(47.4923372, -122.2923814) }}>Test</button>
         </DefaultTheme>
     )
 }

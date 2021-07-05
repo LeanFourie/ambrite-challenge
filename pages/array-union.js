@@ -7,6 +7,10 @@ import { fetchDataFromAPI } from './../helpers/dataManagement'
 // Layout
 import DefaultTheme from './../layouts/default'
 
+// Sections
+import ArrayUnionHeader from './../sections/arrayunionpage/arrayunion-header'
+import ArrayUnionResults from './../sections/arrayunionpage/arrayunion-results'
+
 // Page
 function ArrayUnion( props ) {
     // States
@@ -47,6 +51,8 @@ function ArrayUnion( props ) {
 
         // Set the list state equal to the final unique array
         setDataList(combinedUniqueArrays)
+
+        console.log(combinedUniqueArrays)
     }
 
     // Page
@@ -57,9 +63,19 @@ function ArrayUnion( props ) {
                 identifier: 'Array Union Page'
             }}
         >
-            <button onClick={ () => mergeArrays(props.data.testSet1, props.data.testSet2) }>
-                Test
-            </button>
+            {/* Header */}
+            <ArrayUnionHeader
+                mergeArrays={ () => mergeArrays(props.data.testSet1, props.data.testSet2) }
+            />
+            {/* ./Header */}
+
+            {/* Results */}
+            { dataList.length > 0 &&
+                <ArrayUnionResults
+                    results={ dataList }
+                />
+            }
+            {/* ./Results */}
         </DefaultTheme>
     )
 }

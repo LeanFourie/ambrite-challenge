@@ -1,0 +1,87 @@
+.sidebar {
+    min-height: 100vh;
+    position: sticky;
+    padding: 70px 0;
+    background: rgba($whiteColor, .06);
+    top: 0;
+    align-self: flex-start;
+
+    &__links {
+        display: grid;
+        grid-gap: 30px;
+
+        .links__item {
+            @include transition(all .24s ease);
+            display: grid;
+            grid-auto-flow: column;
+            grid-gap: 8px;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding: 8px 20px;
+
+            // Children
+            &::before {
+                content: '';
+                width: 4px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: transparent;
+            }
+
+            .item__icon {
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+
+                .icon__element {
+                    *[stroke] {
+                        stroke: $whiteColor;
+                    }
+                }
+            }
+
+            .item__label {
+                @include transition(all .24s ease);
+                color: $whiteColor;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                opacity: .7;
+            }
+
+            // States
+            &:hover {
+                @include transition(all .24s ease);
+
+                .item__icon {
+                    .icon__element {
+                        *[stroke] {
+                            stroke: $secondaryColor;
+                        }
+                    }
+                }
+
+                .item__label {
+                    color: $secondaryColor;
+                    opacity: 1;
+                }
+            }
+
+            &--active {
+                background: rgba($whiteColor, .1);
+                pointer-events: none;
+
+                &::before {
+                    background: $whiteColor;
+                }
+
+                .item__label {
+                    color: $whiteColor;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.page {
+    &--home-page {
+        .section {
+            &--links {
+                .links {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                    grid-gap: 20px;
+                    align-items: stretch;
+
+                    @include media-lt-400 {
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    }
+
+                    > * {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}
