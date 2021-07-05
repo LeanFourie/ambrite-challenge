@@ -50,7 +50,13 @@ function ArrayUnion( props ) {
         let combinedUniqueArrays = createUniqueValues(resultFromArray1.concat(resultFromArray2))
 
         // Set the list state equal to the final unique array
-        setDataList(combinedUniqueArrays)
+        setDataList(
+            combinedUniqueArrays.sort((a, b) => {
+                let valueA = parseInt(a.name.substring(3))
+                let valueB = parseInt(b.name.substring(3))
+                return valueA - valueB
+            })
+        )
 
         console.log(combinedUniqueArrays)
     }
